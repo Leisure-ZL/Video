@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Video</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str1">手机号登录</string>
+    <string name="str2">帮助</string>
+    <string name="str3">登陆后更精彩</string>
+    <string name="str4">让家看见你·一个专业的房地产信息互联网交互平台</string>
+    <string name="str5">未注册手机验证后完成注册</string>
+    <string name="str6">获取验证码</string>
+    <string name="str7">账号密码登录</string>
+    <string name="str8">一键登录</string>
+    <string name="str9">其他第三方登录方式</string>
+    <string name="str10">我已确认阅读并同意...</string>
+</resources>

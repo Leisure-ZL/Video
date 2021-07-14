@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/phoneLoginFragment">
+
+
+    <fragment
+        android:id="@+id/phoneLoginFragment"
+        android:name="cn.edu.swu.video.PhoneLoginFragment"
+        android:label="fragment_phone_login"
+        tools:layout="@layout/fragment_phone_login" >
+        <action
+            android:id="@+id/action_phoneLoginFragment_to_verifyLoginFragment"
+            app:destination="@id/verifyLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyLoginFragment"
+        android:name="cn.edu.swu.video.VerifyLoginFragment"
+        android:label="fragment_verify_login"
+        tools:layout="@layout/fragment_verify_login" >
+        <action
+            android:id="@+id/action_verifyLoginFragment_to_focusFragment"
+            app:destination="@id/focusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/focusFragment"
+        android:name="cn.edu.swu.video.FocusFragment"
+        android:label="fragment_focus"
+        tools:layout="@layout/fragment_focus" />
+</navigation>
