@@ -1,7 +1,5 @@
 package cn.edu.swu.video;
 
-import android.graphics.Bitmap;
-import android.media.MediaMetadataRetriever;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import static cn.edu.swu.video.utils.Util.setNetVideoBitmap;
@@ -40,7 +37,7 @@ public class PersonItem1VideoFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_person_item1_video, container, false);
 
         Video item = new Video();
-        item.setSrc("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
+        item.setSrc("http://vjs.zencdn.net/v/oceans.mp4");
         mRows.add(item);
         mRows.add(item);
         mRows.add(item);
@@ -82,7 +79,7 @@ public class PersonItem1VideoFragment extends Fragment {
         @NonNull
         @Override
         public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = mLayoutInflater.inflate(R.layout.item_recyclerview,parent,false);
+            View view = mLayoutInflater.inflate(R.layout.per_video_recyclerview,parent,false);
             return new ItemViewHolder(view);
         }
 

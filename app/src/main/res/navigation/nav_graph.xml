@@ -21,12 +21,12 @@
         android:label="fragment_verify_login"
         tools:layout="@layout/fragment_verify_login" >
         <action
-            android:id="@+id/action_verifyLoginFragment_to_focusFragment"
-            app:destination="@id/focusFragment" />
+            android:id="@+id/action_verifyLoginFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
     </fragment>
-    <fragment
-        android:id="@+id/focusFragment"
-        android:name="cn.edu.swu.video.FocusFragment"
-        android:label="fragment_focus"
-        tools:layout="@layout/fragment_focus" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="cn.edu.swu.video.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 </navigation>

@@ -30,6 +30,6 @@ public class VerifyLoginFragment extends Fragment implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        Navigation.findNavController(getView()).navigate(R.id.action_verifyLoginFragment_to_focusFragment);
+        Navigation.findNavController(getView()).navigate(R.id.action_verifyLoginFragment_to_mainActivity);
     }
 }

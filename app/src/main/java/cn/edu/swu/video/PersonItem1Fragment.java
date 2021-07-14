@@ -45,8 +45,9 @@ public class PersonItem1Fragment extends Fragment {
         mFragmentList.add(new PersonItem1VideoFragment());
         mFragmentList.add(new PersonItem2Fragment());
         mFragmentList.add(new PersonItem2Fragment());
+
         mCollectionAdapter = new ScreenSlidePagerAdapter(this, mFragmentList);
-        viewPager = view.findViewById(R.id.pager);
+        viewPager = view.findViewById(R.id.per_pager);
         viewPager.setAdapter(mCollectionAdapter);
         TabLayout tabLayout = view.findViewById(R.id.tab_layout);
         new TabLayoutMediator(tabLayout, viewPager,

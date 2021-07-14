@@ -14,7 +14,7 @@
             android:id="@+id/r_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/toolbar_meau"
+            app:menu="@menu/toolbar_menu"
             android:background="#FFFFFF"
             app:navigationIcon="@drawable/ic_baseline_dehaze_24"
             android:focusableInTouchMode="true"/>
@@ -189,7 +189,7 @@
             android:layout_below="@id/per_centerR"
             >
             <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_layout"
+                android:id="@+id/per_tab_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -219,7 +219,7 @@
             </com.google.android.material.tabs.TabLayout>
 
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/pager"
+                android:id="@+id/per_pager"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />

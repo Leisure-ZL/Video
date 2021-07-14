@@ -2,14 +2,16 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="300dp"
     android:layout_margin="5dp"
     android:background="@drawable/img_shape">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/v_f_img"/>
+        android:id="@+id/v_f_img"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"/>
 
     <ImageView
         android:layout_width="30dp"

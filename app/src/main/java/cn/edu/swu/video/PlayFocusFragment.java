@@ -25,7 +25,7 @@ import cn.edu.swu.video.view.CircleImageView;
 
 import static cn.edu.swu.video.utils.Util.setNetVideoBitmap;
 
-public class FocusFragment extends Fragment {
+public class PlayFocusFragment extends Fragment {
     RecyclerView mUserRecyclerView;
     List<User> mUserData = new ArrayList<User>();
     LayoutInflater mUserLayoutInflater;
@@ -36,6 +36,7 @@ public class FocusFragment extends Fragment {
     LayoutInflater mVideoLayoutInflater;
     VideoAdapter mVideoAdapter;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +46,7 @@ public class FocusFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_focus, container, false);
+        View view = inflater.inflate(R.layout.fragment_play_focus, container, false);
 
         User user = new User();
         user.setName("123");
@@ -67,7 +68,7 @@ public class FocusFragment extends Fragment {
 
 
         Video item = new Video();
-        item.setSrc("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
+        item.setSrc("http://vjs.zencdn.net/v/oceans.mp4");
         mVideoData.add(item);
         mVideoData.add(item);
         mVideoData.add(item);
@@ -83,6 +84,9 @@ public class FocusFragment extends Fragment {
         mVideoLayoutInflater = getLayoutInflater();
         mVideoRecyclerView.setLayoutManager(manager1);
         mVideoRecyclerView.setAdapter(mVideoAdapter);
+
+
+
 
         return view;
     }
@@ -105,7 +109,7 @@ public class FocusFragment extends Fragment {
         @NonNull
         @Override
         public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = mUserLayoutInflater.inflate(R.layout.user_recyclerview,parent,false);
+            View view = mUserLayoutInflater.inflate(R.layout.play_focus_user_recyclerview,parent,false);
             return new UserViewHolder(view);
         }
 
@@ -142,12 +146,12 @@ public class FocusFragment extends Fragment {
         }
     }
 
-    class VideoAdapter extends RecyclerView.Adapter<VideoViewHolder>{
+     class VideoAdapter extends RecyclerView.Adapter<VideoViewHolder>{
 
         @NonNull
         @Override
         public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = mVideoLayoutInflater.inflate(R.layout.video_focus_recyclerview,parent,false);
+            View view = mVideoLayoutInflater.inflate(R.layout.play_video_recyclerview,parent,false);
             return new VideoViewHolder(view);
         }
 
@@ -162,6 +166,8 @@ public class FocusFragment extends Fragment {
             return mVideoData.size();
         }
     }
+
+
 
 
 }
