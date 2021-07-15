@@ -1,4 +1,4 @@
-package cn.edu.swu.video;
+package cn.edu.swu.video.javaBean;
 
 public class User {
 

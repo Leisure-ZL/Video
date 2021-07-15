@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.edu.swu.video.javaBean.Video;
+
 import static cn.edu.swu.video.utils.Util.setNetVideoBitmap;
 
 
@@ -79,7 +81,7 @@ public class PersonItem1VideoFragment extends Fragment {
         @NonNull
         @Override
         public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = mLayoutInflater.inflate(R.layout.per_video_recyclerview,parent,false);
+            View view = mLayoutInflater.inflate(R.layout.recyclerview_per_video,parent,false);
             return new ItemViewHolder(view);
         }
 

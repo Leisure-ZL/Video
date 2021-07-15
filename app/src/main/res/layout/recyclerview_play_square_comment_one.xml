@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/p_s_c_o_headImg"
+        android:src="@drawable/head_test"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/p_s_c_o_container"
+        android:layout_toRightOf="@id/p_s_c_o_headImg"
+        android:layout_toLeftOf="@id/p_s_c_o_like">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p_s_c_o_username"
+            android:text="用户昵称"
+            android:textColor="#999999"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p_s_c_o_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="评论评论评论评论评论评论评论评论评论评论评论评论评论评论"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p_s_c_o_time"
+            android:text="05-05 回复"
+            android:textSize="12sp"
+            android:textColor="#999999"
+           />
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p_s_c_o_like"
+        android:src="@drawable/ic_baseline_wb_sunny_24"
+        android:background="#00000000"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p_s_c_o_likeNum"
+        android:text="100"
+        android:layout_below="@id/p_s_c_o_like"
+        android:textColor="#999999"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/p_s_c_o_container"/>
+
+
+</RelativeLayout>

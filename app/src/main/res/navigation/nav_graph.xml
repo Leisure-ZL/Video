@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/phoneLoginFragment">
+    app:startDestination="@id/loginIndexFragment">
 
 
     <fragment
         android:id="@+id/phoneLoginFragment"
-        android:name="cn.edu.swu.video.PhoneLoginFragment"
+        android:name="cn.edu.swu.video.LoginPhoneFragment"
         android:label="fragment_phone_login"
-        tools:layout="@layout/fragment_phone_login" >
+        tools:layout="@layout/fragment_login_phone" >
         <action
             android:id="@+id/action_phoneLoginFragment_to_verifyLoginFragment"
             app:destination="@id/verifyLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/verifyLoginFragment"
-        android:name="cn.edu.swu.video.VerifyLoginFragment"
+        android:name="cn.edu.swu.video.LoginVerifyFragment"
         android:label="fragment_verify_login"
-        tools:layout="@layout/fragment_verify_login" >
+        tools:layout="@layout/fragment_login_verify" >
         <action
             android:id="@+id/action_verifyLoginFragment_to_mainActivity"
             app:destination="@id/mainActivity" />
@@ -29,4 +29,13 @@
         android:name="cn.edu.swu.video.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/loginIndexFragment"
+        android:name="cn.edu.swu.video.LoginIndexFragment"
+        android:label="fragment_login_index"
+        tools:layout="@layout/fragment_login_index" >
+        <action
+            android:id="@+id/action_loginIndexFragment_to_phoneLoginFragment"
+            app:destination="@id/phoneLoginFragment" />
+    </fragment>
 </navigation>

@@ -46,11 +46,16 @@ public class PlayFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mFragmentList.add(new PlayFocusFragment());
         mFragmentList.add(new PlayCityFragment());
-        mFragmentList.add(new PlayCityFragment());
+        mFragmentList.add(new PlaySquareFragment());
 
         mCollectionAdapter = new ScreenSlidePagerAdapter(this, mFragmentList);
         viewPager = view.findViewById(R.id.play_pager);
+
+
         viewPager.setAdapter(mCollectionAdapter);
+
+        viewPager.setCurrentItem(2,false);    //修改默认显示,去除动画
+
         TabLayout tabLayout = view.findViewById(R.id.play_tab_layout);
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> tab.setText(mTitle[position])

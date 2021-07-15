@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class VerifyLoginFragment extends Fragment implements View.OnClickListener {
+public class LoginVerifyFragment extends Fragment implements View.OnClickListener {
 
 
 
@@ -23,7 +23,7 @@ public class VerifyLoginFragment extends Fragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_verify_login, container, false);
+        final View view = inflater.inflate(R.layout.fragment_login_verify, container, false);
         view.findViewById(R.id.ver_re_btn).setOnClickListener(this);
         return view;
     }

@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.edu.swu.video.javaBean.Video;
+
 import static cn.edu.swu.video.utils.Util.setNetVideoBitmap;
 
 public class PlayCityFragment extends Fragment {
@@ -67,7 +69,7 @@ public class PlayCityFragment extends Fragment {
         @NonNull
         @Override
         public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = mVideoLayoutInflater.inflate(R.layout.play_video_recyclerview,parent,false);
+            View view = mVideoLayoutInflater.inflate(R.layout.recyclerview_play_video,parent,false);
             return new VideoViewHolder(view);
         }
 

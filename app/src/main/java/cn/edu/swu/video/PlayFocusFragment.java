@@ -21,6 +21,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.edu.swu.video.javaBean.User;
+import cn.edu.swu.video.javaBean.Video;
 import cn.edu.swu.video.view.CircleImageView;
 
 import static cn.edu.swu.video.utils.Util.setNetVideoBitmap;
@@ -109,7 +111,7 @@ public class PlayFocusFragment extends Fragment {
         @NonNull
         @Override
         public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = mUserLayoutInflater.inflate(R.layout.play_focus_user_recyclerview,parent,false);
+            View view = mUserLayoutInflater.inflate(R.layout.recyclerview_play_focus_user,parent,false);
             return new UserViewHolder(view);
         }
 
@@ -151,7 +153,7 @@ public class PlayFocusFragment extends Fragment {
         @NonNull
         @Override
         public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = mVideoLayoutInflater.inflate(R.layout.play_video_recyclerview,parent,false);
+            View view = mVideoLayoutInflater.inflate(R.layout.recyclerview_play_video,parent,false);
             return new VideoViewHolder(view);
         }
 

@@ -46,13 +46,16 @@ public class PersonFragment extends Fragment {
         mFragmentList.add(new PersonItem2Fragment());
         mFragmentList.add(new PersonItem2Fragment());
         mFragmentList.add(new PersonItem2Fragment());
+
         mCollectionAdapter = new ScreenSlidePagerAdapter(this,mFragmentList);
         viewPager = view.findViewById(R.id.per_pager);
         viewPager.setAdapter(mCollectionAdapter);
+
         TabLayout tabLayout = view.findViewById(R.id.per_tab_layout);
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> tab.setText(mTitle[position])
         ).attach();
+
     }
 
     public class ScreenSlidePagerAdapter extends FragmentStateAdapter {
