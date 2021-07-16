@@ -23,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
+
+
         mPlayFragment = new PlayFragment();
+
         mPersonFragment = new PersonFragment();
         mBtmNav = findViewById(R.id.btm_nav_bar);
 
@@ -34,8 +37,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btm_nav_item1:
                     replaceFragment(mPlayFragment);
                     break;
-//                case R.id.btm_nav_item2:
-//                    break;
+                case R.id.btm_nav_item2:
+                    replaceFragment(new PlayCityCitypickerFragment());
+                    break;
 //                case R.id.btm_nav_item3:
 //                    break;
                 case R.id.btm_nav_item4:

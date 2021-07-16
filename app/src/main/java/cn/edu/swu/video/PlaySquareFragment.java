@@ -1,20 +1,28 @@
 package cn.edu.swu.video;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.os.Handler;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -22,15 +30,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.edu.swu.video.javaBean.Video;
+import cn.edu.swu.video.view.MyDialog;
 import cn.edu.swu.video.view.PagerLayoutManager;
 
-public class PlaySquareFragment extends Fragment {
+public class PlaySquareFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
 
 
     RecyclerView mRecyclerview;
     LayoutInflater mLayoutInflater;
     ItemAdapter mAdapter;
     List<Video> mData = new ArrayList<>();
+
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +61,9 @@ public class PlaySquareFragment extends Fragment {
         mRecyclerview.setAdapter(mAdapter);
         mRecyclerview.setLayoutManager(layoutManager);
 
+        swipeRefreshLayout = view.findViewById(R.id.p_s_srl);
+        swipeRefreshLayout.setOnRefreshListener(this);
+
         Video item = new Video();
         item.setSrc("http://vjs.zencdn.net/v/oceans.mp4");
         mData.add(item);
@@ -59,9 +73,23 @@ public class PlaySquareFragment extends Fragment {
         mData.add(item);
 
 
+
         return view;
     }
 
+    @Override
+    public void onRefresh() {
+        //数据源更新...
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                swipeRefreshLayout.setRefreshing(false);
+//                adapter.clear();
+//                list.add("这是第11个数据");
+//                adapter.notifyDataSetChanged();
+            }
+        }, 1000);
+    }
 
 
     class ItemViewHolder extends RecyclerView.ViewHolder{
@@ -93,7 +121,7 @@ public class PlaySquareFragment extends Fragment {
         }
     }
 
-    class ItemAdapter extends RecyclerView.Adapter<ItemViewHolder> implements View.OnClickListener {
+    class ItemAdapter extends RecyclerView.Adapter<ItemViewHolder> implements View.OnClickListener, View.OnLongClickListener {
 
         @NonNull
         @Override
@@ -109,8 +137,11 @@ public class PlaySquareFragment extends Fragment {
             setVideo(holder.videoView);
             holder.videoView.start();
 
+            holder.videoView.setOnLongClickListener(this);
             holder.commentBtn.setOnClickListener(this);
             holder.shareBtn.setOnClickListener(this);
+
+
             //...
 
         }
@@ -161,6 +192,31 @@ public class PlaySquareFragment extends Fragment {
                     break;
             }
 
+        }
+
+        @Override
+        public boolean onLongClick(View v) {
+
+            MyDialog dialog = new MyDialog(getContext(), new MyDialog.setMyDialogListener() {
+                @Override
+                public void onClick(View view) {
+                    switch (view.getId()){
+                        case R.id.d_p_s_btn1:
+                                //...
+                            break;
+                        case R.id.d_p_s_btn2:
+                            break;
+                        case R.id.d_p_s_btn3:
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            });
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            dialog.show();
+
+            return false;
         }
     }
 

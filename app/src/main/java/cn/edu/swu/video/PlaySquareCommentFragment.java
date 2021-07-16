@@ -94,14 +94,19 @@ public class PlaySquareCommentFragment extends BottomSheetDialogFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         mFragmentList.add(new PlaySquareCommentOneFragment());
         mFragmentList.add(new PlaySquareCommentOneFragment());
-        mFragmentList.add(new PlaySquareCommentOneFragment());
+        mFragmentList.add(new PlaySquareCommentThreeFragment());
+
         mCollectionAdapter = new ScreenSlidePagerAdapter(this,mFragmentList);
         viewPager = view.findViewById(R.id.com_pager);
         viewPager.setAdapter(mCollectionAdapter);
         TabLayout tabLayout = view.findViewById(R.id.com_tab_layout);
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> tab.setText(mTitle[position])
+
         ).attach();
+
+
+
     }
 
     public class ScreenSlidePagerAdapter extends FragmentStateAdapter {
