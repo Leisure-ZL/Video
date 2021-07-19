@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/p_s_videoView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/p_s_collection"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="12dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/z1977"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p_s_c_title"
+            android:textColor="#FFE048"
+            android:text="《合集标题》"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p_s_c_esp"
+            android:textColor="#FFE048"
+            android:text="第3集|选集"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/p_s_user"
+        android:layout_above="@id/p_s_content"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:id="@+id/p_s_u_headImg"
+            android:src="@drawable/head_test"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p_s_u_name"
+            android:text="用户昵称"
+            android:textSize="17sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/p_s_content"
+        android:text="#话题字段  作品标题文字， #话题字段
+此处标题最多48字。此处标题最多48
+字段。@用户昵称TWO"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_above="@id/p_s_collection"
+        android:textSize="15sp"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/p_s_location"
+        android:layout_above="@id/p_s_user"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="14dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/z139"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p_s_l_text"
+            android:layout_gravity="center"
+            android:textSize="12dp"
+            android:text="尊悦府邸|渝北区"
+            />
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/z1757"
+        android:layout_alignParentRight="true"
+        android:id="@+id/p_s_right1"
+        android:layout_above="@id/p_s_right2"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="12dp"
+        android:background="#00000000"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p_s_right2"
+        android:src="@drawable/z1759"
+        android:layout_above="@id/p_s_right3"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="12dp"
+        android:background="#00000000"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p_s_right3"
+        android:src="@drawable/z1760"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="12dp"
+        android:layout_above="@id/p_s_right4"
+        android:background="#00000000"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/p_s_right4"
+        android:src="@drawable/z1758"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#00000000"/>
+
+
+</RelativeLayout>

@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/btm_nav_item1"
-        android:icon="@drawable/ic_baseline_begin"
+        android:icon="@drawable/select_icon1"
         android:title="1"/>
     <item
         android:id="@+id/btm_nav_item2"

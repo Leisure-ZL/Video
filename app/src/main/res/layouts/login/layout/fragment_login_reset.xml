@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="21dp"
+    android:paddingBottom="44dp"
+    android:id="@+id/reset_login"
+    android:background="@drawable/z1761"
+    tools:context=".login.LoginResetFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/rs_top">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/z333"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重置密码"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/rs_top"
+        android:layout_marginTop="30dp"
+        android:padding="30dp">
+        <RelativeLayout
+            android:id="@+id/r_r_r"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/l_u_phoneCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="28dp"
+                android:gravity="center"
+                android:text="+86"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/l_icon"
+                android:layout_toRightOf="@id/l_u_phoneCheck"
+                android:src="@drawable/z1769" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/l_icon"
+                android:layout_marginLeft="13dp"
+                android:textSize="23sp"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:textColorHint="@color/white"/>
+
+            <ImageButton
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/l405" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape"
+            android:layout_below="@id/r_r_r"
+            android:id="@+id/l_rs_ver"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/l_rs_text"
+                android:text="验证码"
+                android:textSize="16sp"
+                android:layout_marginRight="13dp"
+                android:layout_centerVertical="true"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="textPassword"
+                android:textSize="23sp"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:textColorHint="@color/white"
+                android:layout_toRightOf="@id/l_rs_text"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:text="获取"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_get_btn"
+            android:layout_toRightOf="@id/l_rs_ver"
+            android:layout_below="@id/r_r_r"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="下一步"
+            android:textSize="24sp"
+            android:id="@+id/l_rs_toSet"
+            android:background="@drawable/z2046"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/l_rs_ver"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l_rs_toSet"
+            android:text="无法接收短信找回账号？"
+            android:textColor="#BF97AED2"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

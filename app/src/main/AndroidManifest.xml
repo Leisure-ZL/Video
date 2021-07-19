@@ -16,7 +16,7 @@
         android:networkSecurityConfig="@xml/network_permission_config"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".LoginActivity">
+        <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

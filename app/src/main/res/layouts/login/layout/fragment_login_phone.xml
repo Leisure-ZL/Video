@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginPhoneFragment"
+    android:paddingTop="21dp"
+    android:paddingBottom="44dp"
+    android:id="@+id/phone_login"
+    android:background="@drawable/z1761">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:id="@+id/u_top">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/z333"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/z405"
+            android:layout_toLeftOf="@id/l_p_topT"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str2"
+            android:textSize="14sp"
+            android:id="@+id/l_p_topT"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/u_top"
+        android:id="@+id/r_text">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str3"
+            android:textSize="34sp"
+            android:textColor="#F6E1CE"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str4"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#BFF6E1CE"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_below="@id/r_text"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-2dp"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/r_r_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="9dp"
+            android:text="@string/str5"
+            android:textColor="#F6E1CE"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:id="@+id/r_r_r"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_below="@id/r_r_text"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/l_p_phoneCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="28dp"
+                android:gravity="center"
+                android:text="+86"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/l_icon"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/l_p_phoneCheck"
+                android:src="@drawable/z1769" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/l_icon"
+                android:layout_marginLeft="13dp"
+                android:textSize="23sp"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:textColorHint="@color/white"/>
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/l405" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/get_ver_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/r_r_r"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/z1958"
+            android:text="@string/str6"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/l_p_toUser"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_below="@id/get_ver_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="16dp"
+            android:background="#00000000"
+            android:text="@string/str7"
+            android:textColor="#BFFFFFFF"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/l_p_toQuick"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_below="@id/get_ver_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:background="#00000000"
+            android:text="@string/str8"
+            android:textColor="#BFFFFFFF"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:inputType="phone"
+            android:textColor="@color/white"
+            android:textSize="23sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str9"
+            android:textSize="14sp"
+            android:textColor="@color/white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp"
+            android:id="@+id/l_btm">
+            <ImageButton
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/z238"
+                android:layout_marginRight="28dp"/>
+
+            <ImageButton
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/z240"
+                android:layout_marginRight="28dp"/>
+
+            <ImageButton
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/z242"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/z349"
+            android:layout_below="@id/l_btm"
+            android:id="@+id/l_p_btm_imgBtn"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我确认已阅读并同意《滔滔视频服务协议》《滔滔直播平台服务
+协议》《隐私政策》以及《天翼账号服务与隐私协议》"
+            android:textSize="10sp"
+            android:layout_toRightOf="@id/l_p_btm_imgBtn"
+            android:layout_below="@id/l_btm"
+            android:textColor="#80FFFFFF"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

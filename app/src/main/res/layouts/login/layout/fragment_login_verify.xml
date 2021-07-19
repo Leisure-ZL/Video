@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginVerifyFragment"
+    android:paddingTop="21dp"
+    android:paddingBottom="44dp"
+    android:id="@+id/verify_login"
+    android:background="@drawable/z1761">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:id="@+id/u_top">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/z333"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入验证码"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/z405"
+            android:layout_toLeftOf="@id/l_p_topT"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str2"
+            android:textSize="14sp"
+            android:id="@+id/l_p_topT"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/u_top"
+        android:id="@+id/r_text">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str3"
+            android:textSize="34sp"
+            android:textColor="#F6E1CE"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str4"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#BFF6E1CE"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/r_text"
+        android:layout_marginTop="78dp"
+        android:layout_marginLeft="31dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已发送验证码至"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            android:id="@+id/l_v_text"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18368686688"
+            android:textColor="#ffffffff"
+            android:textSize="23sp"
+            android:layout_toRightOf="@id/l_v_text"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/l_v_text"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16dp"
+            android:id="@+id/ver_input">
+
+            <EditText
+                android:id="@+id/num_in1_et"
+                android:layout_width="48dp"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:background="@drawable/shape_login_ver"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/num_in2_et"
+                android:layout_width="48dp"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:background="@drawable/shape_login_ver"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_marginRight="5dp"
+
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/num_in3_et"
+                android:layout_width="48dp"
+                android:layout_height="54dp"
+                android:background="@drawable/shape_login_ver"
+                android:gravity="center"
+                android:layout_marginRight="5dp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/num_in4_et"
+                android:layout_width="48dp"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_login_ver"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/num_in5_et"
+                android:layout_width="48dp"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:background="@drawable/shape_login_ver"
+                android:inputType="number"
+                android:layout_marginRight="5dp"
+                android:maxLength="1"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/num_in6_et"
+                android:layout_width="48dp"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:background="@drawable/shape_login_ver"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重新发"
+            android:textSize="14dp"
+            android:id="@+id/ver_re_btn"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/ver_input"
+            android:background="@drawable/z1960"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
