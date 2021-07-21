@@ -11,23 +11,34 @@
         android:id="@+id/item_img"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/j190"
+        android:text="顶置"
+        android:textSize="10sp"
+        android:textColor="#333333"
+        android:gravity="center"/>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_remove_red_eye_24"
+        android:src="@drawable/z1187"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="4dp"
+        android:id="@+id/eyeImg"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/per_wat_text"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp"
-        android:layout_marginRight="45dp"
-        android:textSize="18sp"
-        android:text="0"/>
+        android:layout_toLeftOf="@id/eyeImg"
+        android:textSize="10sp"
+        android:text="222"/>
 
 </RelativeLayout>

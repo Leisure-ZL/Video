@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:id="@+id/p_s_refreshLayout">
 
-        <com.scwang.smart.refresh.header.MaterialHeader
+        <com.scwang.smart.refresh.header.ClassicsHeader
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srlDrawableProgress="@drawable/l892"

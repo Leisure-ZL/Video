@@ -25,7 +25,7 @@ public class PersonFragment extends Fragment {
     ScreenSlidePagerAdapter mCollectionAdapter;
     ViewPager2 viewPager;
     List<Fragment> mFragmentList = new ArrayList<Fragment>();
-    String[] mTitle = {"作品","赞过","收藏","私密"};
+    String[] mTitle = {"作品0","赞过0","收藏0","私密0"};
 
 
     @Override
@@ -45,9 +45,9 @@ public class PersonFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         mFragmentList.add(new PersonItem1Fragment());
-        mFragmentList.add(new PersonItem2Fragment());
-        mFragmentList.add(new PersonItem2Fragment());
-        mFragmentList.add(new PersonItem2Fragment());
+        mFragmentList.add(new PersonItem1Fragment());
+        mFragmentList.add(new PersonItem1Fragment());
+        mFragmentList.add(new PersonItem1Fragment());
 
         mCollectionAdapter = new ScreenSlidePagerAdapter(this,mFragmentList);
         viewPager = view.findViewById(R.id.per_pager);

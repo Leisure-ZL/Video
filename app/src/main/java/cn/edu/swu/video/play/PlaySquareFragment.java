@@ -1,6 +1,7 @@
 package cn.edu.swu.video.play;
 
 import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -21,7 +24,7 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 import com.scwang.smart.refresh.footer.ClassicsFooter;
-import com.scwang.smart.refresh.header.MaterialHeader;
+import com.scwang.smart.refresh.header.ClassicsHeader;
 import com.scwang.smart.refresh.layout.api.RefreshLayout;
 import com.scwang.smart.refresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smart.refresh.layout.listener.OnRefreshListener;
@@ -78,7 +81,7 @@ public class PlaySquareFragment extends Fragment{
 
     private void reFresh(View view) {
         RefreshLayout refreshLayout = (RefreshLayout)view.findViewById(R.id.p_s_refreshLayout);
-        refreshLayout.setRefreshHeader(new MaterialHeader(getContext()));
+        refreshLayout.setRefreshHeader(new ClassicsHeader(getContext()));
         refreshLayout.setRefreshFooter(new ClassicsFooter(getContext()));
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
@@ -95,6 +98,7 @@ public class PlaySquareFragment extends Fragment{
     }
 
 
+
     class ItemViewHolder extends RecyclerView.ViewHolder{
 
         private VideoView videoView;
@@ -104,6 +108,7 @@ public class PlaySquareFragment extends Fragment{
         private TextView content;
         private TextView colTitle;
         private TextView colEsp;
+        private SurfaceView surfaceView;
 
         private ImageButton commentBtn;
         private ImageButton shareBtn;
@@ -139,14 +144,12 @@ public class PlaySquareFragment extends Fragment{
             holder.videoView.setVideoURI(Uri.parse(item.getSrc()));
             setVideo(holder.videoView);
             holder.videoView.start();
-
             holder.videoView.setOnLongClickListener(this);
+
             holder.commentBtn.setOnClickListener(this);
             holder.shareBtn.setOnClickListener(this);
 
-
             //...
-
         }
 
         @Override

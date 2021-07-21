@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -59,6 +60,7 @@ public class PlayFragment extends Fragment {
         viewPager.setCurrentItem(2,false);    //修改默认显示,去除动画
 
         TabLayout tabLayout = view.findViewById(R.id.play_tab_layout);
+
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> tab.setText(mTitle[position])
         ).attach();

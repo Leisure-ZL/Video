@@ -2,7 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
+    android:layout_height="268dp"
     android:layout_margin="5dp"
     android:background="@drawable/img_shape">
 
@@ -13,39 +13,46 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"/>
 
+
+
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:src="@drawable/head_test"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="4dp"/>
+        android:layout_marginBottom="9dp"
+        android:id="@+id/headImg"
+        android:layout_marginLeft="9dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UserName"
+        android:textSize="10sp"
+        android:layout_toRightOf="@id/headImg"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp"
-        android:layout_marginLeft="50dp"/>
+        android:layout_marginLeft="8dp"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_remove_red_eye_24"
+        android:src="@drawable/z1187"
+        android:id="@+id/eyeImg"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"/>
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="3dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/per_wat_text"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/eyeImg"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp"
-        android:layout_marginRight="45dp"
-        android:textSize="18sp"
-        android:text="0"/>
+        android:textSize="10sp"
+        android:text="222"/>
 
 
 </RelativeLayout>

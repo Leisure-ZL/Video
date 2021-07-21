@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/p_s_btm"
-    android:layout_margin="10dp"
+    android:layout_marginLeft="24dp"
     >
 
     <ImageView
@@ -18,8 +18,9 @@
         android:layout_height="wrap_content"
         android:text="Name1"
         android:id="@+id/p_s_b_name"
-        android:textColor="@color/black"
+        android:layout_marginTop="4dp"
+        android:textColor="#666666"
         android:layout_below="@id/p_s_b_img"
-        android:textSize="16sp"
+        android:textSize="11sp"
         android:layout_centerHorizontal="true"/>
 </RelativeLayout>

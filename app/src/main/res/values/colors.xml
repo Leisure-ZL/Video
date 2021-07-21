@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bg">#020305</color>
     <color name="trans">#00000000</color>
+    <color name="often">#D0A376</color>
 </resources>

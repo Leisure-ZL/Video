@@ -45,8 +45,8 @@ public class PersonItem1Fragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mFragmentList.add(new PersonItem1VideoFragment());
-        mFragmentList.add(new PersonItem2Fragment());
-        mFragmentList.add(new PersonItem2Fragment());
+        mFragmentList.add(new PersonItem1VideoFragment());
+        mFragmentList.add(new PersonItem1VideoFragment());
 
         mCollectionAdapter = new ScreenSlidePagerAdapter(this, mFragmentList);
         viewPager = view.findViewById(R.id.per_pager);

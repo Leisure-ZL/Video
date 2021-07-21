@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "cn.edu.swu.video"
-        minSdkVersion 16
+        minSdkVersion 18
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -58,6 +58,7 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation 'com.github.zaaach:CityPicker:2.1.0'
     implementation  'com.scwang.smart:refresh-layout-kernel:2.0.3'
-    implementation  'com.scwang.smart:refresh-header-material:2.0.3'
+    implementation  'com.scwang.smart:refresh-header-classics:2.0.3'
     implementation  'com.scwang.smart:refresh-footer-classics:2.0.3'
+
 }

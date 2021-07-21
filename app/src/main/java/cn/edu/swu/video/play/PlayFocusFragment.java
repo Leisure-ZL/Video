@@ -16,6 +16,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.scwang.smart.refresh.footer.ClassicsFooter;
+import com.scwang.smart.refresh.header.ClassicsHeader;
+import com.scwang.smart.refresh.layout.api.RefreshLayout;
+import com.scwang.smart.refresh.layout.listener.OnLoadMoreListener;
+import com.scwang.smart.refresh.layout.listener.OnRefreshListener;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -24,7 +30,6 @@ import java.util.List;
 import cn.edu.swu.video.R;
 import cn.edu.swu.video.javaBean.User;
 import cn.edu.swu.video.javaBean.Video;
-import cn.edu.swu.video.view.CircleImageView;
 
 import static cn.edu.swu.video.utils.Util.setNetVideoBitmap;
 
@@ -88,17 +93,35 @@ public class PlayFocusFragment extends Fragment {
         mVideoRecyclerView.setLayoutManager(manager1);
         mVideoRecyclerView.setAdapter(mVideoAdapter);
 
-
+        reFresh(view);
 
 
         return view;
+    }
+
+    private void reFresh(View view) {
+        RefreshLayout refreshLayout = (RefreshLayout)view.findViewById(R.id.refreshLayout);
+        refreshLayout.setRefreshHeader(new ClassicsHeader(getContext()));
+        refreshLayout.setRefreshFooter(new ClassicsFooter(getContext()));
+        refreshLayout.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(RefreshLayout refreshlayout) {
+                refreshlayout.finishRefresh(2000/*,false*/);//传入false表示刷新失败
+            }
+        });
+        refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
+            @Override
+            public void onLoadMore(RefreshLayout refreshlayout) {
+                refreshlayout.finishLoadMore(2000/*,false*/);//传入false表示加载失败
+            }
+        });
     }
 
 
 
     class UserViewHolder extends RecyclerView.ViewHolder{
 
-        CircleImageView mImgView;
+        ImageView mImgView;
         TextView mTextView;
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -11,10 +11,11 @@
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabTextColor="#99FFFFFF"
             android:layout_marginTop="10dp"
-            app:tabIndicatorColor="@color/white"
-            android:background="@color/bg"
-            app:tabTextColor="@color/white"
+            app:tabBackground="@drawable/select_per_item"
+            app:tabSelectedTextColor="#333333"
+            app:tabIndicatorHeight="0dp"
             >
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"

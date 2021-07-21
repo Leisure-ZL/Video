@@ -37,17 +37,10 @@ public class PlaySquareShareFragment extends BottomSheetDialogFragment {
     Context mContext;
 
     RecyclerView mRecyclerView1;
-    RecyclerView mRecyclerView2;
-    RecyclerView mRecyclerView3;
-
     List<User> mData1 = new ArrayList<User>();
-    List<Function> mData2 = new ArrayList<Function>();
-    List<Function> mData3 = new ArrayList<Function>();
     LayoutInflater mLayoutInflater;
 
     GeneralAdapter<User> mGeneralAdapter1;
-    GeneralAdapter<Function> mGeneralAdapter2;
-    GeneralAdapter<Function> mGeneralAdapter3;
 
     public static PlaySquareShareFragment getInstance() {
         return new PlaySquareShareFragment();
@@ -109,41 +102,18 @@ public class PlaySquareShareFragment extends BottomSheetDialogFragment {
         mData1.add(user);
         mData1.add(user);
 
-        mData2.add(function);
-        mData2.add(function);
-        mData2.add(function);
-        mData2.add(function);
-        mData2.add(function);
-        mData2.add(function);
-        mData2.add(function);
-
-        mData3.add(function);
-        mData3.add(function);
-        mData3.add(function);
-        mData3.add(function);
-        mData3.add(function);
     }
 
     private void initRV(){
         mRecyclerView1 = mView.findViewById(R.id.p_s_s_rv1);
-        mRecyclerView2 = mView.findViewById(R.id.p_s_s_rv2);
-        mRecyclerView3 = mView.findViewById(R.id.p_s_s_rv3);
 
         mGeneralAdapter1 = new GeneralAdapter<User>(mData1);
-        mGeneralAdapter2 = new GeneralAdapter<Function>(mData2);
-        mGeneralAdapter3 = new GeneralAdapter<Function>(mData3);
 
         LinearLayoutManager manager1 = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
-        LinearLayoutManager manager2 = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
-        LinearLayoutManager manager3 = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
         mLayoutInflater = getLayoutInflater();
 
         mRecyclerView1.setLayoutManager(manager1);
         mRecyclerView1.setAdapter(mGeneralAdapter1);
-        mRecyclerView2.setLayoutManager(manager2);
-        mRecyclerView2.setAdapter(mGeneralAdapter2);
-        mRecyclerView3.setLayoutManager(manager3);
-        mRecyclerView3.setAdapter(mGeneralAdapter3);
     }
 
 

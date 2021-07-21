@@ -17,8 +17,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_nav_menu"
-        android:background="@color/white"
-        app:itemIconTint="@null"/>
+        app:itemTextColor="#121726"
+        app:itemIconTint="@color/often"
+        android:background="#121726"
+        />
 
 
 
