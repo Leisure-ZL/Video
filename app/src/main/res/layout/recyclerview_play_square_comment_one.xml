@@ -3,48 +3,66 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="20dp">
+    android:layout_marginTop="20dp">
 
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:id="@+id/p_s_c_o_headImg"
         android:src="@drawable/head_test"
-        android:layout_margin="10dp"/>
+        android:layout_marginLeft="20dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginLeft="8dp"
         android:id="@+id/p_s_c_o_container"
         android:layout_toRightOf="@id/p_s_c_o_headImg"
         android:layout_toLeftOf="@id/p_s_c_o_like">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/p_s_c_o_username"
-            android:text="用户昵称"
-            android:textColor="#999999"
-            android:textSize="12sp"/>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/p_s_c_o_username"
+                android:text="用户昵称"
+                android:textColor="#999999"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="13dp"
+                android:background="@drawable/z1960"
+                android:text="作者"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/p_s_c_o_content"
             android:textColor="@color/black"
-            android:textSize="16sp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="评论评论评论评论评论评论评论评论评论评论评论评论评论评论"/>
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="#话题字段  评论评论评论， #话题字段评论评论评论，评论评论评论，评论评
+论评论评论，@用户昵称TWO"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/p_s_c_o_time"
-            android:text="05-05 回复"
+            android:text="05-05  回复"
             android:textSize="12sp"
-            android:textColor="#999999"
+            android:textColor="#C4C4C4"
            />
     </LinearLayout>
 
@@ -52,12 +70,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/p_s_c_o_like"
-        android:src="@drawable/ic_baseline_wb_sunny_24"
+        android:src="@drawable/l887"
         android:background="#00000000"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -66,7 +83,7 @@
         android:text="100"
         android:layout_below="@id/p_s_c_o_like"
         android:textColor="#999999"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="22dp"
         android:layout_toRightOf="@id/p_s_c_o_container"/>
 
 

@@ -20,6 +20,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.scwang.smart.refresh.footer.ClassicsFooter;
+import com.scwang.smart.refresh.header.MaterialHeader;
+import com.scwang.smart.refresh.layout.api.RefreshLayout;
+import com.scwang.smart.refresh.layout.listener.OnLoadMoreListener;
+import com.scwang.smart.refresh.layout.listener.OnRefreshListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,15 +34,15 @@ import cn.edu.swu.video.javaBean.Video;
 import cn.edu.swu.video.view.MyDialog;
 import cn.edu.swu.video.view.PagerLayoutManager;
 
-public class PlaySquareFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+public class PlaySquareFragment extends Fragment{
 
 
     RecyclerView mRecyclerview;
     LayoutInflater mLayoutInflater;
     ItemAdapter mAdapter;
     List<Video> mData = new ArrayList<>();
+    View mView;
 
-    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,17 +53,15 @@ public class PlaySquareFragment extends Fragment implements SwipeRefreshLayout.O
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_play_square, container, false);
+        mView = inflater.inflate(R.layout.fragment_play_square, container, false);
 
-        mRecyclerview = view.findViewById(R.id.p_s_rv);
+        mRecyclerview = mView.findViewById(R.id.p_s_rv);
         mLayoutInflater = getLayoutInflater();
         PagerLayoutManager layoutManager = new PagerLayoutManager(getContext());
         mAdapter = new ItemAdapter();
         mRecyclerview.setAdapter(mAdapter);
         mRecyclerview.setLayoutManager(layoutManager);
 
-        swipeRefreshLayout = view.findViewById(R.id.p_s_srl);
-        swipeRefreshLayout.setOnRefreshListener(this);
 
         Video item = new Video();
         item.setSrc("http://vjs.zencdn.net/v/oceans.mp4");
@@ -67,23 +71,27 @@ public class PlaySquareFragment extends Fragment implements SwipeRefreshLayout.O
         mData.add(item);
         mData.add(item);
 
+        reFresh(mView);
 
-
-        return view;
+        return mView;
     }
 
-    @Override
-    public void onRefresh() {
-        //数据源更新...
-        new Handler().postDelayed(new Runnable() {
+    private void reFresh(View view) {
+        RefreshLayout refreshLayout = (RefreshLayout)view.findViewById(R.id.p_s_refreshLayout);
+        refreshLayout.setRefreshHeader(new MaterialHeader(getContext()));
+        refreshLayout.setRefreshFooter(new ClassicsFooter(getContext()));
+        refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
-            public void run() {
-                swipeRefreshLayout.setRefreshing(false);
-//                adapter.clear();
-//                list.add("这是第11个数据");
-//                adapter.notifyDataSetChanged();
+            public void onRefresh(RefreshLayout refreshlayout) {
+                refreshlayout.finishRefresh(2000/*,false*/);//传入false表示刷新失败
             }
-        }, 1000);
+        });
+        refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
+            @Override
+            public void onLoadMore(RefreshLayout refreshlayout) {
+                refreshlayout.finishLoadMore(2000/*,false*/);//传入false表示加载失败
+            }
+        });
     }
 
 
@@ -153,8 +161,10 @@ public class PlaySquareFragment extends Fragment implements SwipeRefreshLayout.O
                 public boolean onTouch(View v, MotionEvent event) {
                     if (videoView.isPlaying()){
                         videoView.pause();
+                        mView.findViewById(R.id.p_s_pause).setVisibility(View.VISIBLE);
                     }else {
                         videoView.start();
+                        mView.findViewById(R.id.p_s_pause).setVisibility(View.INVISIBLE);
                     }
                     return false;
                 }

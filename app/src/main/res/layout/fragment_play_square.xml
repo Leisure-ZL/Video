@@ -3,33 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".play.PlaySquareFragment">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/p_s_srl">
+        android:id="@+id/p_s_refreshLayout">
+
+        <com.scwang.smart.refresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableProgress="@drawable/l892"
+          />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/p_s_rv"/>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/p_s_startBtn"
-        android:layout_centerInParent="true"
-        android:background="#00000000"
-        android:src="@drawable/z1973"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/p_s_pause"
-        />
 
 </RelativeLayout>
