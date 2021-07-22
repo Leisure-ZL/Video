@@ -27,18 +27,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    sourceSets {
-        main {
-            res.srcDirs =
-                    [
-                            'src/main/res/layouts/login',
-                            'src/main/res/layouts/play',
-                            'src/main/res/layouts/person',
-                            'src/main/res/layouts',
-                            'src/main/res'
-                    ]
-        }
-    }
 
 }
 
@@ -60,5 +48,5 @@ dependencies {
     implementation  'com.scwang.smart:refresh-layout-kernel:2.0.3'
     implementation  'com.scwang.smart:refresh-header-classics:2.0.3'
     implementation  'com.scwang.smart:refresh-footer-classics:2.0.3'
-
+    implementation "androidx.room:room-runtime:2.0.0"
 }

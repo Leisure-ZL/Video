@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.LoginQuickFragment"
+    tools:context=".ui.login.LoginQuickFragment"
     android:paddingTop="21dp"
     android:paddingBottom="44dp"
     android:id="@+id/quick_login"

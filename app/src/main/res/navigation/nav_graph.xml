@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/phoneLoginFragment"
-        android:name="cn.edu.swu.video.login.LoginPhoneFragment"
+        android:name="cn.edu.swu.video.ui.login.LoginPhoneFragment"
         android:label="fragment_phone_login"
         tools:layout="@layout/fragment_login_phone" >
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/verifyLoginFragment"
-        android:name="cn.edu.swu.video.login.LoginVerifyFragment"
+        android:name="cn.edu.swu.video.ui.login.LoginVerifyFragment"
         android:label="fragment_verify_login"
         tools:layout="@layout/fragment_login_verify" >
         <action
@@ -32,12 +32,12 @@
     </fragment>
     <activity
         android:id="@+id/mainActivity"
-        android:name="cn.edu.swu.video.MainActivity"
+        android:name="cn.edu.swu.video.ui.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/loginIndexFragment"
-        android:name="cn.edu.swu.video.login.LoginIndexFragment"
+        android:name="cn.edu.swu.video.ui.login.LoginIndexFragment"
         android:label="fragment_login_index"
         tools:layout="@layout/fragment_login_index" >
         <action
@@ -46,12 +46,12 @@
     </fragment>
     <fragment
         android:id="@+id/loginQuickFragment"
-        android:name="cn.edu.swu.video.login.LoginQuickFragment"
+        android:name="cn.edu.swu.video.ui.login.LoginQuickFragment"
         android:label="fragment_login_quick"
         tools:layout="@layout/fragment_login_quick" />
     <fragment
         android:id="@+id/loginResetFragment"
-        android:name="cn.edu.swu.video.login.LoginResetFragment"
+        android:name="cn.edu.swu.video.ui.login.LoginResetFragment"
         android:label="fragment_login_reset"
         tools:layout="@layout/fragment_login_reset" >
         <action
@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginUsernameFragment"
-        android:name="cn.edu.swu.video.login.LoginUsernameFragment"
+        android:name="cn.edu.swu.video.ui.login.LoginUsernameFragment"
         android:label="fragment_login_username"
         tools:layout="@layout/fragment_login_username" >
         <action
@@ -72,7 +72,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginSetFragment"
-        android:name="cn.edu.swu.video.login.LoginSetFragment"
+        android:name="cn.edu.swu.video.ui.login.LoginSetFragment"
         android:label="fragment_login_set"
         tools:layout="@layout/fragment_login_set" />
 </navigation>

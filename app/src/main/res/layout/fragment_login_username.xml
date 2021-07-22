@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.LoginUsernameFragment"
+    tools:context=".ui.login.LoginUsernameFragment"
     android:paddingTop="21dp"
     android:paddingBottom="44dp"
     android:id="@+id/username_login"

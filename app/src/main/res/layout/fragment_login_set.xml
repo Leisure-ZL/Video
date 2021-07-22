@@ -7,7 +7,7 @@
     android:paddingBottom="44dp"
     android:id="@+id/set_login"
     android:background="@drawable/z1761"
-    tools:context=".login.LoginSetFragment">
+    tools:context=".ui.login.LoginSetFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

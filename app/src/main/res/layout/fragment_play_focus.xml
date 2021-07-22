@@ -1,64 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".play.PlayFocusFragment"
-    android:background="@drawable/z1761">
+    android:background="@drawable/z1761"
+    tools:context=".ui.play.PlayFocusFragment">
 
     <TextView
+        android:id="@+id/f_top_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="我的关注对象"
-        android:layout_marginTop="64dp"
-        android:layout_marginLeft="20dp"
         android:layout_alignParentTop="true"
-        android:textSize="16sp"
-        android:id="@+id/f_top_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="64dp"
+        android:text="我的关注对象"
         android:textColor="#C4C4C4"
-        />
+        android:textSize="16sp" />
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/f_rv_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/f_rv_user"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/f_top_text"/>
+        android:layout_below="@id/f_top_text"
+        android:layout_marginTop="16dp" />
 
     <View
+        android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@drawable/line"
-        android:id="@+id/line"
         android:layout_below="@id/f_rv_user"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"/>
+        android:background="@drawable/line" />
 
     <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/line"
-        android:id="@+id/refreshLayout">
+        android:layout_below="@id/line">
 
-    <com.scwang.smart.refresh.header.ClassicsHeader
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srlDrawableProgress="@drawable/l892"
-    />
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srlDrawableProgress="@drawable/l892" />
 
         <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/f_rv_video"
-        />
+            android:id="@+id/f_rv_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
         <com.scwang.smart.refresh.footer.ClassicsFooter
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srlDrawableProgress="@drawable/l892"
-            />
+            app:srlDrawableProgress="@drawable/l892" />
 
     </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
